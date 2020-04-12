@@ -1,5 +1,5 @@
-FROM java: 8
-COPY . /var/www/java
-WORKDIR /var/www/java
+FROM openjdk: 8
+COPY . /dockerapp
+WORKDIR /dockerapp
 RUN javac calculadora.java
-CMD ["java", "Calculadora"]
+CMD ["java", "calculadora"]
